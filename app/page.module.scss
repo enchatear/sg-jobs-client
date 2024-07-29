@@ -1,0 +1,13 @@
+.main {
+  padding: 6rem;
+  min-height: 100vh;
+  background: gainsboro;
+
+  .test_ui {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+  }
+
+}

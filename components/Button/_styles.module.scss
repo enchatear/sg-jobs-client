@@ -1,0 +1,57 @@
+@import '@/styles/defaults';
+
+.button {
+  --vertical-spacing: 0.75rem;
+  --horizontal-spacing: 1rem;
+  --border-width: 1px;
+  --border-color: #{$c-Primary-2};
+  --border-radius: 0.5rem;
+  --text-color: #{$c-Primary-1};
+  --ico-color: var(--text-color);
+  --background-color: #{$c-Primary-3};
+  --background-image: none;
+
+  user-select: none;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+
+  cursor: pointer;
+  padding: 12px 24px;
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--border-radius);
+  word-wrap: normal;
+  word-break: normal;
+  font-weight: 500;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  background-image: var(--background-image);
+  width: fit-content;
+
+  transition:
+          opacity 150ms linear,
+          box-shadow 150ms linear,
+          background-color 150ms linear,
+          color 100ms linear,
+          border-color 100ms linear,
+          background-position 200ms linear;
+
+  .icon {
+    --icon-color: var(--ico-color);
+  }
+
+  &:disabled,
+  &:hover:disabled,
+  &:active:disabled,
+  &:focus:disabled,
+  &:focus-visible:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+
+    & > * {
+      cursor: not-allowed;
+    }
+  }
+}

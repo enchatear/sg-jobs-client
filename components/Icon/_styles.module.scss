@@ -1,0 +1,52 @@
+@import '@/styles/defaults';
+
+.icon {
+  --icon-color: #{$c-Primary-2};
+
+  transition:
+          transform 125ms linear,
+          opacity 150ms linear;
+
+  path {
+    will-change: stroke, fill;
+    transition:
+            stroke 100ms linear,
+            fill 100ms linear,
+            transform 150ms linear;
+  }
+
+  &.stroke {
+    path,
+    rect,
+    circle {
+      stroke: var(--icon-color);
+    }
+  }
+  &.fill {
+    path,
+    rect,
+    circle {
+      fill: var(--icon-color);
+    }
+  }
+
+  &.radio {
+    circle:last-of-type {
+      fill: var(--icon-color);
+    }
+    circle:not(:last-of-type) {
+      stroke: var(--icon-color);
+    }
+  }
+
+  &.info {
+    circle {
+      stroke: var(--icon-color);
+      fill: none;
+    }
+    path {
+      stroke: none;
+      fill: var(--icon-color);
+    }
+  }
+}
