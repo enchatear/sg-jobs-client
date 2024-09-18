@@ -1,16 +1,10 @@
-import styles from './page.module.scss';
-import Button from '@/components/Button';
-import Icon from '@/components/Icon';
-import Field from '@/components/Field';
+import React from 'react';
+import HeaderSection from '@/features/candidate/containers/home-page/header-section';
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.test_ui}>
-        <Icon name="clock" />
-        <Button icon="search">SEARCH</Button>
-        <Field title="Field test" />
-      </div>
+    <main>
+      <HeaderSection />
     </main>
   );
 }

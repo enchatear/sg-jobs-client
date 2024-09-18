@@ -1,0 +1,119 @@
+@import '@/styles/defaults';
+
+.checkbox-wrapper {
+  user-select: none;
+  display: flex;
+  cursor: pointer;
+  float: left;
+  transition: 200ms;
+
+  &.disabled {
+    opacity: 0.7;
+    cursor: not-allowed !important;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: 4;
+      background-color: transparent;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &.secondary {
+    padding: 6px;
+    border-radius: 6px;
+
+    &:hover {
+      background: $c-Primary-3;
+    }
+
+    &_checked {
+      background: $c-Primary-2;
+      color: $c-Primary-3;
+
+      &:hover {
+        background: $c-Accent-2;
+      }
+
+      & > label {
+        border-color: $c-Primary-3 !important;
+        background-color: $c-Primary-3 !important;
+
+        svg path {
+          stroke: $c-Primary-2 !important;
+        }
+      }
+    }
+  }
+
+  .checkbox {
+    display: flex;
+    flex-shrink: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid $c-Primary-2;
+    color: $c-Primary-2;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+    margin-left: 2px;
+    margin-top: 2px;
+    transition: all 0.2s;
+    background: $c-Primary-3;
+
+    input {
+      left: -1000px;
+      opacity: 0;
+      position: absolute;
+    }
+    .count {
+      display: none;
+    }
+    svg {
+      transform: scale(1.4);
+      display: none;
+      path {
+        stroke: $c-Primary-3;
+      }
+    }
+    &.checked {
+      border-color: $c-Primary-2;
+      background-color: $c-Primary-2;
+      background-position: center;
+      background-size: contain;
+      svg,
+      .count {
+        display: flex;
+      }
+    }
+  }
+
+  &:hover:not(.disabled) {
+    .checkbox {
+      border-color: $c-Accent-2;
+      width: 20px;
+      height: 20px;
+      border-radius: 3px;
+    }
+  }
+  .title {
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 8px;
+  }
+}
+
+.clear {
+  clear: both;
+}

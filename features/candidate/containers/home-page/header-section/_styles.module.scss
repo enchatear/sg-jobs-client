@@ -1,0 +1,40 @@
+@import "@/styles/defaults";
+
+.header {
+  padding: 20px 0 40px;
+  background: linear-gradient(77.23deg, #00CABA 53.93%, #DEE036 111.34%, #00645C 111.34%);
+
+  @media screen and (max-width: 768px) {
+    padding: 12px 0 10px;
+  }
+
+  &_content {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+    width: 100%;
+  }
+
+  &_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &_subtitle {
+    & h2 {
+      font-size: 70px;
+      font-weight: 700;
+      line-height: 54px;
+      color: $c-Primary-1;
+
+      @media screen and (max-width: 768px) {
+        font-size: 46px;
+      }
+
+      .subtitle_strong {
+        color: $c-Primary-3;
+      }
+    }
+  }
+}

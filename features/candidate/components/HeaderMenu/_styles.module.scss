@@ -1,0 +1,17 @@
+@import "@/styles/defaults";
+
+.header_menu {
+  display: flex;
+  gap: 20px;
+
+  .header_btn {
+    padding: 10px 32px;
+    height: 36px;
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  .login_btn {
+    background: $c-Accent-1;
+  }
+}
