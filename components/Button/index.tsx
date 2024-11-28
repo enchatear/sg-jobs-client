@@ -26,15 +26,17 @@ const Button: React.FC<ButtonProps> = ({
   ...rest
 }) => {
   return to ? (
-    <Link href={to} {...rest} className={clsx(styles.button, className)}>
-      {' '}
-      {icon && iconPosition === 'left' ? (
-        <Icon name={icon} className={clsx(styles.icon, iconClassName)} />
-      ) : null}
-      {children}
-      {icon && iconPosition === 'right' ? (
-        <Icon name={icon} className={clsx(styles.icon, iconClassName)} />
-      ) : null}
+    <Link href={to}>
+      <button {...rest} type={type} className={clsx(styles.button, className)}>
+        {' '}
+        {icon && iconPosition === 'left' ? (
+          <Icon name={icon} className={clsx(styles.icon, iconClassName)} />
+        ) : null}
+        {children}
+        {icon && iconPosition === 'right' ? (
+          <Icon name={icon} className={clsx(styles.icon, iconClassName)} />
+        ) : null}
+      </button>
     </Link>
   ) : (
     <button {...rest} type={type} className={clsx(styles.button, className)}>

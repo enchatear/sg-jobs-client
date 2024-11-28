@@ -1,13 +1,19 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './_styles.module.scss';
 import Link from 'next/link';
 
 const JobCategories: React.FC<{
   categories: { id: number; name: string }[];
 }> = ({ categories }) => {
-  return (
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  return isClient ? (
     <div className={styles.job_categories}>
       <div className={styles.job_categories_head}>
         <h4>Category Jobs</h4>
@@ -27,7 +33,7 @@ const JobCategories: React.FC<{
         )}
       </div>
     </div>
-  );
+  ) : null;
 };
 
 export default JobCategories;
