@@ -1,0 +1,49 @@
+@import "@/styles/defaults";
+
+.job_categories {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @media screen and (max-width: 768px) {
+    gap: 18px;
+  }
+
+  &_head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    & > h4 {
+      font-size: 22px;
+      color: $c-Primary-1;
+      font-weight: 400;
+    }
+
+    .see_all {
+      color: $c-Primary-1;
+      text-decoration: underline;
+      font-weight: 300;
+      font-size: 16px;
+    }
+  }
+
+  &_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    .category {
+      padding: 8px 10px;
+      border: 1px solid $c-Primary-1;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 150ms;
+
+      &:hover {
+        box-shadow: 0 6px 12px 0 rgba(21, 48, 85, 0.24);
+      }
+    }
+  }
+}

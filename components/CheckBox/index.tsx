@@ -2,24 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import clsx from 'clsx';
 import styles from './_styles.module.scss';
-
-const Mark = () => (
-  <svg
-    width="16"
-    height="16"
-    viewBox="0 0 24 24"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M7 13.6L9.4 16L17.4 8"
-      stroke="black"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-);
+import Icon from '@/components/Icon';
 
 const CheckBox: React.FC<
   React.DetailedHTMLProps<
@@ -83,7 +66,7 @@ const CheckBox: React.FC<
             {count > 0 ? (count < 100 ? count : '+') : ''}
           </span>
         ) : (
-          <Mark />
+          <Icon name="check" />
         )}
         <input
           type="checkbox"

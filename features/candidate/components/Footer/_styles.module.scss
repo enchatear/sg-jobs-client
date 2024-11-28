@@ -1,0 +1,73 @@
+@import "@/styles/defaults";
+
+.footer {
+  padding: 12px;
+  background: $c-Accent-4;
+
+  .links_list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+
+    .footer_btn {
+      padding: 2px;
+      //height: 30px;
+      background: transparent;
+      border: 1px solid $c-Primary-3;
+      color: $c-Primary-3;
+      width: 100%;
+      font-size: 12px;
+      gap: 6px;
+
+      &.telegram {
+        background: $c-Telegram;
+
+        & > svg {
+          transform: scale(0.75);
+        }
+      }
+
+      &.whatsapp {
+        background: $c-WhatsApp;
+
+        & > svg {
+          transform: scale(0.75);
+        }
+      }
+
+      &.phone {
+        & > svg {
+          transform: scale(0.75);
+        }
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, 1fr);
+    }
+
+  }
+
+  &_low {
+    margin-top: 12px;
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+
+    & > span {
+      color: $c-Primary-3;
+      font-size: 10px;
+    }
+
+    .footer_logo {
+      gap: 4px;
+      align-items: center;
+      & > h4 {
+        color: $c-Primary-3;
+        font-size: 10px;
+        font-weight: 500;
+      }
+    }
+  }
+}

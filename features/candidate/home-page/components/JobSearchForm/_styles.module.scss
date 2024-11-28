@@ -1,0 +1,82 @@
+@import "@/styles/defaults";
+
+.search_form {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 1fr;
+  align-items: end;
+
+  .field_container {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 768px) {
+    .first_field {
+      border-radius: 6px 0 0 6px !important;
+      border-right: none !important;
+    }
+
+    .search_combobox {
+      border-radius: 0 !important;
+    }
+
+    .search_btn {
+      border-radius: 0 6px 6px 0;
+      border-left: none;
+      height: 49.6px !important;
+    }
+  }
+
+  .field_title {
+    color: $c-Primary-1;
+    font-size: 28px !important;
+    margin-left: 10px;
+  }
+
+  .search_btn {
+    width: 100%;
+    background: $c-Accent-1;
+    font-size: 22px;
+    font-weight: 400;
+    height: 44px;
+  }
+
+  .middle_field {
+    border-right: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+
+    .field_title {
+      font-size: 22px !important;
+      font-weight: 400 !important;
+      margin: 0 0 4px 0;
+    }
+
+    .type_container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      width: 100%;
+
+      .fake_check {
+        padding: 5px;
+        width: 100%;
+        border: 1px solid $c-Primary-2;
+        border-radius: 6px;
+        text-align: center;
+        height: 29px;
+
+        & > span {
+          font-size: 18px;
+          line-height: 13px;
+          font-weight: 400;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

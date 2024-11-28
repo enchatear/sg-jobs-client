@@ -1,0 +1,60 @@
+@import "@/styles/defaults";
+
+.telegram {
+  margin: 50px 0;
+
+  &_block {
+    background: url("/candidate-gradient.png");
+    background-size: cover;
+    background-position-y: -268px;
+    padding: 16px 14px;
+    border-radius: 10px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    .title {
+      font-size: 46px;
+      font-weight: 700;
+      line-height: 56px;
+      max-width: 316px;
+
+      &_strong {
+        color: $c-Primary-3;
+      }
+    }
+
+    .telegram_list {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      width: 100%;
+
+      .telegram_item {
+        background: #269BD2;
+        padding: 8px 10px;
+        border-radius: 8px;
+        display: flex;
+        gap: 10px;
+        width: 100%;
+        color: $c-Primary-3;
+        font-size: 18px;
+        font-weight: 400;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      background-position-y: 0;
+      padding: 16px;
+
+      .title {
+        line-height: 54px;
+      }
+
+      .telegram_list {
+        flex-direction: column;
+      }
+    }
+  }
+}

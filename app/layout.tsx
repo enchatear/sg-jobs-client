@@ -9,7 +9,10 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: 'Singapore Jobs',
+  title: {
+    default: 'Singapore Jobs',
+    template: '%s | Singapore Jobs',
+  },
   description: 'Find cool job for you',
 };
 

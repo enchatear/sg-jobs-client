@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './_styles.module.scss';
 import LogoBox from '@/components/LogoBox';
-import HeaderMenu from '@/features/candidate/components/HeaderMenu';
+import HeaderMenu from '@/features/candidate/home-page/components/HeaderMenu';
 
 const HeaderSection: React.FC = () => {
   return (

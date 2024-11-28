@@ -11,7 +11,7 @@
   --border-color-active: #{$c-Accent-2};
   --background-color: #{$c-Primary-3};
   --background-color-active: #{$c-Primary-3};
-  --text-color: #{$c-Primary-2};
+  --text-color: #{$c-Greyscale-1};
   --text-color-active: #{$c-Primary-2};
   --placeholder-color: var(--text-color);
   --ico-color: #{$c-Primary-1};
@@ -147,10 +147,9 @@
 
     font-weight: 500;
     font-size: $font-2;
-    line-height: $font-3;
     color: var(--title-color);
 
-    transition: 200ms;
+    transition: color 125ms;
   }
 
   .hint {
@@ -173,7 +172,7 @@
             background-color 100ms linear,
             border-color 150ms linear,
             box-shadow 125ms linear;
-    padding: 12px 16px;
+    padding: 12px 10px;
     overflow: hidden;
 
     .input {
@@ -184,14 +183,15 @@
       border: none;
       border-radius: 4px;
       font-weight: 400;
-      font-size: $font-3;
+      font-size: 18px;
       line-height: $font-6;
       background-color: transparent;
       color: var(--text-color);
       transition: color 150ms linear;
 
       &::placeholder {
-        color: $c-Primary-1;
+        //color: $c-Primary-1;
+        color: $c-Greyscale-1;
       }
 
       &[type='password']::-ms-reveal,

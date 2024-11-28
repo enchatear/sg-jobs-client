@@ -8,6 +8,10 @@ import search from '@/assets/icons/search.svg';
 import telegram from '@/assets/icons/telegram.svg';
 import whatsapp from '@/assets/icons/whatsapp.svg';
 import burger from '@/assets/icons/burger.svg';
+import chevronDown from '@/assets/icons/chevronDown.svg';
+import atSign from '@/assets/icons/at-sign.svg';
+import miniLogo from '@/assets/icons/mini-logo.svg';
+import check from '@/assets/icons/check.svg';
 import clsx from 'clsx';
 import styles from './_styles.module.scss';
 
@@ -20,7 +24,11 @@ export type IconName =
   | 'search'
   | 'telegram'
   | 'whatsapp'
-  | 'burger';
+  | 'burger'
+  | 'chevronDown'
+  | 'atSign'
+  | 'miniLogo'
+  | 'check';
 
 const icons: {
   [Key in IconName]: React.FC<React.SVGProps<SVGSVGElement>>;
@@ -34,6 +42,10 @@ const icons: {
   telegram,
   whatsapp,
   burger,
+  chevronDown,
+  atSign,
+  miniLogo,
+  check,
 };
 
 type IconProps = React.SVGProps<SVGSVGElement> & { name: IconName };
